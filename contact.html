@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="js/startupScript.js"></script>
+    <script src="js/formvalidation.js"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <main>
+        <form id="contact_form" method="post" action="index.html">
+            <fieldset id="input_fieldset">
+                <legend>Contact Me</legend>
+                <div class="formfield">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    <div class="contact_error error" id="name_error">Please enter your name.</div>
+                </div>
+                <div class="formfield">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone">
+                    <div class="contact_error error" id="phone_error">Please enter your phone number.</div>
+                    <div class="contact_error error" id="phoneformat_error">Please enter a valid phone number.</div>
+                </div>
+                <div class="formfield">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                    <div class="contact_error error" id="email_error">Please enter your email.</div>
+                    <div class="contact_error error" id="emailformat_error">Please enter a valid email.</div>
+                </div>
+                <div class="formfield">
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" rows="20"></textarea>
+                    <div class="contact_error error" id="comments_error">Please enter your comments.</div>
+                </div>
+            </fieldset>
+            <fieldset id="button_fieldset">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

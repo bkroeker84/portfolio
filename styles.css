@@ -1,0 +1,417 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #ff8d8d;
+    color: #1c1144;
+    font-family: 'League Spartan', sans-serif;
+    width:auto;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+header, main, footer, section, div, nav, ul, ol, fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main{
+    flex-direction: column;
+    padding-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background:#1c1144;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#ff8d8d;
+    border:#1c1144 2px solid;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #fc6464;
+}
+
+::-webkit-scrollbar-corner{
+    background:#1c1144;
+}
+
+/* HEADER */
+header{
+    padding: 25px 0;
+    background-color: #1c1144;
+    flex-basis: 100%;
+    width: 100%;
+}
+
+    header h1{
+        font-size: 10em;
+        color:#ff8d8d;
+    }
+
+    header nav{
+        flex-basis: 100%;
+    }
+
+    header nav ul{
+        justify-content:center;
+        flex-basis: 100%;
+    }
+
+    header nav ul li{
+        border-radius: 8px;
+        background-color:#ff8d8d;
+        width: 200px;
+        height: 60px;
+        font-size: 2rem;
+        align-self: center;
+        text-align: center;
+    }
+
+    header nav ul li a{
+        border-radius: 8px;
+        display: flex;
+        text-decoration: none;
+        font-weight: 700;
+        color:#220147;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header a:hover{
+        cursor:pointer;
+        outline-offset: -4px;
+        outline-width: 6px;
+        outline-color: white;
+        outline-style:solid;
+    }
+
+    header nav ul li:nth-child(2){
+        margin: 0 10%;
+    }
+
+/* FOOTER */
+footer{
+    padding-top: 50px;
+    padding-bottom: 30px
+}
+
+    footer nav, footer nav ul{
+        flex-basis: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    footer nav ul li a, footer h1{
+        color:#1c1144;
+        font-weight: 700;
+    }
+
+    footer nav ul li:nth-child(2){
+        margin: 0 20px;
+    }
+
+    footer h1{
+        font-size: 1rem;
+    }
+
+    footer a:hover{
+        color: white;
+    }
+
+/* PORTFOLIO */
+#portfolio{
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+    #portfolio section{
+        align-items: start;
+        align-content:start;
+    }
+
+    #portfolio h1,
+    #portfolio h2,
+    #portfolio h3{
+        width: 100%;
+        text-align: center;
+    }
+
+    .course{
+        flex-direction: row;
+        justify-content: space-around;
+        width: fit-content;
+        margin-top: 20px;
+        flex-basis: 40%;
+    }
+
+    .course *{
+        margin-bottom: 10px;
+    }
+
+    .course h1{
+        padding-bottom: 20px;
+    }
+
+    .portfolio_item{
+        width: 600px;
+    }
+
+    #portfolio img{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+/* ABOUT */
+#about{
+    width: 80%;
+    align-content:center;
+    align-items: center;
+}
+
+    #about *:not(li){
+        padding: 10px 0;
+    }
+
+    #skills{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #skills h2{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .skill_list{
+        flex-direction: column;
+        flex-basis: content;
+        justify-content: start;
+        align-content: start;
+    }
+
+    #skills ul{
+        display:block;
+        list-style: circle;
+    }
+
+    #skills li:not(:last-child){
+        padding-bottom: 5px;
+    }
+
+    #technical_skills li:nth-child(2){
+        margin-left: 10px;
+    }
+
+    #about img{
+        width: 250px;
+        height: 255px;
+        align-self: center;
+    }
+
+/* CONTACT */
+#contact_form{
+    font-size: 3rem;
+}
+
+    .error{
+        display: none;
+        color: #1c1144;
+        font-size: 1.5rem;  
+        padding-top: 20px;
+        flex-basis: 100%;
+    }
+
+    .error:not(#comment_error){
+        text-align: left;
+        padding-left: 23%;
+    }
+
+    #comment_error{
+        text-align: center;
+    }
+
+    #contact_form fieldset{
+        width: 600px;
+        border: none;
+    }
+
+    #contact_form fieldset legend{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .formfield{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+    }
+
+    .formfield:not(:first-child), #button_fieldset{
+        padding-top: 10px;
+    }
+
+    .formfield{
+        padding-bottom: 10px;
+    }
+
+    .formfield:last-child{
+        flex-direction: inherit;
+    }
+
+    .formfield:last-child label{
+        text-align: center;
+        flex-basis: 100%;
+    }
+
+    .formfield textarea{
+        flex-basis: 100%;
+        resize: vertical;
+        padding: 10px;
+        color: #ff8d8d;
+        font-weight: 600;
+    }
+
+    .formfield label{
+        text-align: right;
+        font-size: 2.5rem;
+        justify-content: center;
+    }
+
+    .formfield:not(:last-child) label{
+        float: left;
+        width: 20%;
+    }
+
+    .formfield input, .formfield textarea{
+        border: none;
+        border-radius: 5px;
+        background-color: #1c1144;
+        font-family: 'League Spartan', sans-serif;
+        font-size: 1.25rem;
+    }
+
+    .formfield input{
+        width: 77%;
+        padding: 5px;
+        margin-left: 3%;
+        color: #ff8d8d;
+        font-weight: 600;
+    }
+
+    #contact_form fieldset button{
+        padding: 15px 30px;
+        margin: 0 50px;
+        border: none;
+        border-radius: 5px;
+        background-color: #1c1144;
+        color: #ff8d8d;
+        font-size: 1.5rem;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 700;
+    }
+
+    #contact_form fieldset button:hover{
+        cursor: pointer;
+        outline-offset: -4px;
+        outline-width: 4px;
+        outline-color: white;
+        outline-style:solid;
+    }
+
+/* LOWER RESOLUTIONS */
+@media(max-width: 768px){
+    body, header, main, footer, section, #contact_form{
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* HEADER */
+        header h1{
+            font-size: 9em !important;
+            padding: 0 5%;
+        }
+        nav{
+            width: 100%;
+        }
+
+        header nav ul li{
+            width: 100%;
+            margin: 0 !important;
+            border-radius: 0;
+        }
+
+        header nav ul li:not(:first-child, :last-child){
+            margin: 3px 0 !important;
+        }
+
+    /* CONTACT */
+    #contact_form fieldset{
+        width: 90%;
+    }
+
+    /* PORTFOLIO */
+    #portfolio, .course{
+        width: 100%;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+        #portfolio ul{
+            flex-direction: column !important;
+        }
+
+        #portfolio li{
+            margin: 0;
+        }
+
+        .portfolio_item{
+            width: 90% !important;
+        }
+
+        #portfolio img{
+            width: 100%;
+        }
+
+    /* ABOUT */
+    #about{
+        padding-left: 5%;
+        padding-right: 5%;    
+    }
+
+        #about h1{
+            width: auto !important;
+        }
+
+        #about ul{
+            margin-left: 5%;
+        }
+}
